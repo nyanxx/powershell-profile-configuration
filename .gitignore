@@ -1,0 +1,14 @@
+Help/
+Modules/
+Other/
+Scripts/
+Functions/Chrome_Functions.ps1
+Functions/Get-Size.ps1
+Functions/Show_InstalledSoftwares.ps1
+Functions/Syncthing_Interact.ps1
+Functions/Trash-Bin.ps1
+Functions/WSL_Functions.ps1
+Functions/WifiMan.ps1
+Functions/cdRemake_Function.ps1
+Functions/lsRemake_Function.ps1
+Functions/tempc_fun.ps1
