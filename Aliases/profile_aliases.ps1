@@ -27,8 +27,8 @@ Set-Alias rbin Open-RecycleBin
 Function Git-Status { git status }
 Set-Alias gs Git-Status
 
-Function Git-AddAll { git add . }
-Set-Alias ga Git-AddAll
+Function Git-Add($file) { git add $file }
+Set-Alias ga Git-Add
 
 #Function Git-Restore { logic }
 #Set-Alias xx Git-Restore

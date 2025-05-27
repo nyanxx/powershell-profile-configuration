@@ -5,7 +5,7 @@ $functionFiles = @(
 	"Chrome_Functions.ps1",			# Source Functions For Chrome & ChromeApps
 	#"cdRemake_Function.ps1",		# NOTE! The newer version of PowerShell has fixed most issues, except for navigating back to a previous location with special characters in the directory path, such as: '[ 10 ] Example
 	#"tempc_fun.ps1",			# Source Function For Temperature ( Require Administrative Privileges )
-	"TrashCLI_Function.ps1",		# Source Function Of Trash-Cli ( Windows Remake )
+	"Trash-Bin.ps1",		# Source Function Of Trash-Cli ( Windows Remake )
 	"lsRemake_Function.ps1",		# Get-ChildItem-Remake & Original ls -> la
 	"Syncthing_Interact.ps1",
 	"Get-Size.ps1",
@@ -24,3 +24,7 @@ foreach ($file in $functionFiles) {
 	    Write-Host "Functions : $file not found!" -ForegroundColor Red
 	}
 }
+
+Remove-Variable -Name file
+Remove-Variable -Name filePath
+Remove-Variable -Name functionFiles
