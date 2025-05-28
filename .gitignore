@@ -2,7 +2,7 @@ Help/
 Modules/
 Other/
 Scripts/
-Functions/Chrome_Functions.ps1
+Functions/Chrome_Functions_IDs.psd1
 Functions/Get-Size.ps1
 Functions/Show_InstalledSoftwares.ps1
 Functions/Syncthing_Interact.ps1
