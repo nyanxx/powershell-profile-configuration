@@ -25,7 +25,7 @@ Function Syncthing-Interact {
 		default { Write-Host "`'$attb`' is not a proper parameter of synt, use 'synt help' for more info." -ForegroundColor Red}
 		}
 } 
-New-Alias synt Syncthing-Interact
+Set-Alias synt Syncthing-Interact
 
 
 

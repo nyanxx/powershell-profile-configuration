@@ -13,6 +13,8 @@ Set-Alias which where.exe
 
 Set-Alias grep findstr.exe
 
+Set-Alias gog Search-QueryOnGoogle.exe
+
 Function Create-File { $null > $args }
 Set-Alias touch Create-File
 

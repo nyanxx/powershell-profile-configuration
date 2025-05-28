@@ -21,8 +21,8 @@ Function Get-FileSize {
 	Write-Host "Comming Soon"
 }
 
-New-Alias cdsize Get-CurrentDirectorySize
-New-Alias dsize Get-DirectorySize
-New-Alias fsize Get-FileSize
+Set-Alias cdsize Get-CurrentDirectorySize
+Set-Alias dsize Get-DirectorySize
+Set-Alias fsize Get-FileSize
 
 
