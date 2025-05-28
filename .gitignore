@@ -2,12 +2,13 @@ Help/
 Modules/
 Other/
 Scripts/
+
+# ChromeAppIds
 Functions/Chrome_Functions_IDs.psd1
-Functions/Show_InstalledSoftwares.ps1
-Functions/cdRemake_Function.ps1
-Functions/lsRemake_Function.ps1
-Functions/tempc_fun.ps1
 
 # These files have their own repository
 Functions/Trash-Bin.ps1
-Functions/WifiMan.ps1
+Functions/WifiMan.ps1 
+
+# https://github.com/nyanxx/trash-bin-cli-powershell-windows
+# https://github.com/nyanxx/wifi-wrapper-powershell-windows
