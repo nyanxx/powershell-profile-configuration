@@ -10,7 +10,8 @@ $functionFiles = @(
 	"Syncthing_Interact.ps1",
 	"Get-Size.ps1",
 	"Show_InstalledSoftwares.ps1",
-	"WifiMan.ps1"
+	"WifiMan.ps1",
+	"Get-Sha256Hash.ps1"
 )
 
 # Loop through each function file and source it if it exists
