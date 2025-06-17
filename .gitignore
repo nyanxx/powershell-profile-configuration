@@ -8,8 +8,8 @@ Scripts/
 Functions/Chrome_Functions_IDs.psd1
 
 # These files have their own repository
-Functions/Trash-Bin.ps1
-Functions/WifiMan.ps1 
+Functions/Trash-Bin/
+Functions/WifiMan/
 
 # https://github.com/nyanxx/trash-bin-cli-powershell-windows
 # https://github.com/nyanxx/wifi-wrapper-powershell-windows
