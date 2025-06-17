@@ -1,27 +1,35 @@
 # PowerShell Version v7.5.0
 
 Function Prompt {
-	$CurrentDir = Get-Location
+	#$HomeDir = [Environment]::GetFolderPath("UserProfile")
+	$CurrentDir = (Get-Location).Path
 	$BatteryPercent = (Get-CimInstance Win32_Battery).EstimatedChargeRemaining
 
+	if ($CurrentDir -eq "$HOME") {
+		$CurrentDir = $CurrentDir -replace [Regex]::Escape($HOME), '~\'
+	} elseif ($CurrentDir -like "$HOME*") {
+		$CurrentDir = $CurrentDir -replace [Regex]::Escape($HOME), '~'
+	}
+	
 	# Define ANSI color codes
-	$Green = "`e[32m"
-	$Orange = "`e[33m"
-	$Red = "`e[31m"
-	$Warning = "`e[31m⚠"
+	#$Green = "e[32m"
+	#$Orange = "e[33m"
+	#$Red = "e[31m"
+	$RedWarning = "`e[31m⚠"
 	$ResetColor = "`e[0m"
 
 	if ($BatteryPercent -gt 50) {
-		$ColoredMsg = "$Green[$BatteryPercent%]"
+		$ColoredMsg = "`e[32m[$BatteryPercent%]"
 	} elseif ($BatteryPercent -gt 20) {
-		$ColoredMsg = "$Orange[$BatteryPercent%]"
+		$ColoredMsg = "`e[33m[$BatteryPercent%]"
 	} elseif ($BatteryPercent -gt 10) {
-		$ColoredMsg = "$Red[$BatteryPercent%]"
+		$ColoredMsg = "`e[31m[$BatteryPercent%]"
 	} else {
-		$ColoredMsg = "$Warning[$BatteryPercent%]"
+		$ColoredMsg = "$RedWarning[$BatteryPercent%]"
 	}
-
-	return "$ColoredMsg $ResetColor PS $CurrentDir> "
+	
+	#return "$ColoredMsg$ResetColor $CurrentDir>"
+	return "$ColoredMsg$ResetColor $CurrentDir> "
 }
 
 
