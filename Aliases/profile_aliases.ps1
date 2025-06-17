@@ -78,3 +78,9 @@ Function Start-NeovimWithTelescope {
 	nvim -c "Telescope find_files"
 }
 Set-Alias tel Start-NeovimWithTelescope
+
+Function Source-Profile {
+	$Expression = ". $PROFILE"
+	Invoke-Expression $Expression
+}
+Set-Alias sop Source-Profile
