@@ -15,7 +15,7 @@ Function Prompt {
 	#$Green = "e[32m"
 	#$Orange = "e[33m"
 	#$Red = "e[31m"
-	$RedWarning = "`e[31m⚠"
+	$RedWarning = "`e[31m⚠︎"
 	$ResetColor = "`e[0m"
 
 	if ($BatteryPercent -gt 50) {
