@@ -84,3 +84,9 @@ Function Source-Profile {
 	Invoke-Expression $Expression
 }
 Set-Alias sop Source-Profile
+
+Function List-NumberedDir {
+	#Get-ChildItem -Name '[0-9][0-9]*'
+	Get-ChildItem -Directory '[0-9][0-9]*'
+}
+Set-Alias lsn List-NumberedDir 
