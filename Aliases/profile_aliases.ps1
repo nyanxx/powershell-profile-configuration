@@ -89,4 +89,9 @@ Function List-NumberedDir {
 	#Get-ChildItem -Name '[0-9][0-9]*'
 	Get-ChildItem -Directory '[0-9][0-9]*'
 }
-Set-Alias lsn List-NumberedDir 
+Set-Alias lsn List-NumberedDir
+
+Function Start-ClockTimer {
+	Start-Process -FilePath "shell:AppsFolder\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App"
+}
+Set-Alias timer Start-ClockTimer
