@@ -95,3 +95,6 @@ Function Start-ClockTimer {
 	Start-Process -FilePath "shell:AppsFolder\Microsoft.WindowsAlarms_8wekyb3d8bbwe!App"
 }
 Set-Alias timer Start-ClockTimer
+
+# Code @ https://github.com/nyanxx/powershell-mytools/blob/main/Generate-GitIgnoreFile.ps1
+Set-Alias ggif Generate-GitIgnoreFile.ps1
