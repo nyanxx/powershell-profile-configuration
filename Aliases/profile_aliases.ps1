@@ -13,6 +13,7 @@ Set-Alias which where.exe
 
 Set-Alias grep findstr.exe
 
+# Code @ https://github.com/nyanxx/powershell-mytools/blob/main/Search-QueryOnGoogle.ps1
 Set-Alias gog Search-QueryOnGoogle.ps1
 
 Function Create-File { $null > $args }
