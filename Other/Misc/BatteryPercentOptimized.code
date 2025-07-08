@@ -1,0 +1,23 @@
+# Global variable to store battery percentage
+$global:BatteryCharge = (Get-CimInstance Win32_Battery).EstimatedChargeRemaining
+
+# Function to update battery charge periodically
+$BatteryTimer = {
+    $global:BatteryCharge = (Get-CimInstance Win32_Battery).EstimatedChargeRemaining
+}
+
+# Create a System.Timers.Timer instance
+$timer = New-Object System.Timers.Timer
+$timer.Interval = 60000  # Set interval to 60 seconds (60000 ms)
+$timer.AutoReset = $true
+$timer.Enabled = $true
+
+# Register event to update battery percentage at intervals
+Register-ObjectEvent -InputObject $timer -EventName Elapsed -Action $BatteryTimer
+
+# Custom prompt function
+Function Prompt {
+    $CurrentDir = Get-Location
+    "[$global:BatteryCharge%] PS $CurrentDir> "
+}
+

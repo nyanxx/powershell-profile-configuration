@@ -1,0 +1,35 @@
+Function Prompt {
+    $CurrentDir = (Get-Location).Path
+    $HomeDir = [Environment]::GetFolderPath("UserProfile")
+
+    # Replace home path with ~
+    if ($CurrentDir -like "$HomeDir*") {
+        $CurrentDir = $CurrentDir -replace [regex]::Escape($HomeDir), '~'
+    }
+
+    $BatteryInfo = Get-CimInstance Win32_Battery
+    $BatteryPercent = if ($BatteryInfo) { $BatteryInfo.EstimatedChargeRemaining } else { "AC" }
+
+    # ANSI color codes
+    $Green = "`e[32m"
+    $Orange = "`e[33m"
+    $Red = "`e[31m"
+    $Warning = "`e[31m⚠"
+    $ResetColor = "`e[0m"
+
+    # Color selection logic
+    if ($BatteryPercent -eq "AC") {
+        $ColoredMsg = "$Green[AC]"
+    } elseif ($BatteryPercent -gt 50) {
+        $ColoredMsg = "$Green[$BatteryPercent%]"
+    } elseif ($BatteryPercent -gt 20) {
+        $ColoredMsg = "$Orange[$BatteryPercent%]"
+    } elseif ($BatteryPercent -gt 10) {
+        $ColoredMsg = "$Red[$BatteryPercent%]"
+    } else {
+        $ColoredMsg = "$Warning[$BatteryPercent%]"
+    }
+
+    return "$ColoredMsg $ResetColor PS $CurrentDir> "
+}
+
