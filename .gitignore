@@ -1,11 +1,6 @@
 Help/
-Modules/
-Functions/Modules/
-Other/
+/Modules/
 Scripts/
-
-# ChromeAppIds
-Functions/Chrome_Functions_IDs.psd1
 
 # These files have their own repository
 Functions/Trash-Bin/
