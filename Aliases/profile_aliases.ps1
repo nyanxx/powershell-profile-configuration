@@ -99,3 +99,6 @@ Set-Alias timer Start-ClockTimer
 
 # Code @ https://github.com/nyanxx/powershell-mytools/blob/main/Generate-GitIgnoreFile.ps1
 Set-Alias ggif Generate-GitIgnoreFile.ps1
+
+# Code @ https://github.com/nyanxx/powershell-mytools/blob/main/Search-QueryOnCopilot.ps1
+Set-Alias cop Search-QueryOnCopilot.ps1
