@@ -62,7 +62,12 @@ Set-Alias info Start-HWiNFO
 Function Start-Obsidian { Start-Process -FilePath "$HOME\AppData\Local\Programs\Obsidian\Obsidian.exe" }
 Set-Alias obs Start-Obsidian
 
-Function Run-AdminPowershell { Start-Process pwsh.exe -Verb RunAs }
+Function Run-AdminPowershell { 
+	# Starts the standalone pwsh.exe in its standard console
+	#Start-Process pwsh.exe -Verb RunAs
+	# Run the wt.exe ( Windows Terminal ) with elevated PowerShell profile
+	Start-Process "wt.exe" -ArgumentList '-p "PowerShell"' -Verb RunAs
+}
 Set-Alias admin Run-AdminPowershell
 
 Function Start-MicrosoftSettings { Start-Process "ms-settings:"}
