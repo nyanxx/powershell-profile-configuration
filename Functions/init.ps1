@@ -12,7 +12,8 @@ $functionFiles = @(
 	"Show_InstalledSoftwares.ps1",
 	"WifiMan\WifiMan.ps1",
 	"Get-Sha256Hash.ps1",
-	"Invoke-FromHistory.ps1"
+	"Invoke-FromHistory.ps1",
+	"Create-CaddyFile.ps1"
 )
 
 # Loop through each function file and source it if it exists
