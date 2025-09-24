@@ -107,3 +107,8 @@ Set-Alias ggif Generate-GitIgnoreFile.ps1
 
 # Code @ https://github.com/nyanxx/powershell-mytools/blob/main/Search-QueryOnCopilot.ps1
 Set-Alias cop Search-QueryOnCopilot.ps1
+
+Function Open-MicrosoftStore {
+	start ms-windows-store:
+}
+Set-Alias store Open-MicrosoftStore 
