@@ -34,7 +34,8 @@ Function Prompt {
 
 
 # To Turn Off PowerShell Update Check 
-# Create an Environmental Variable "POWERSHELL_UPDATECHECK" and "Off" as Its Value.
+# Open EditEnvironmentVariables in PowerShell Using : "rundll32.exe sysdm.cpl,EditEnvironmentVariables"
+# Create an Environment Variable "POWERSHELL_UPDATECHECK" and "Off" as Its Value.
 
 # Turn Off Predictive IntelliSense Ghosted Suggestions
 Set-PSReadLineOption -PredictionSource None
