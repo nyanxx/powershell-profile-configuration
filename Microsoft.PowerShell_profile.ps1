@@ -59,3 +59,13 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
+
+
+# Make fzf use fd 
+# 1. Set-PsFzfOption -EnableFd:$true (requires some Module)
+# 2. OR set the Environment Variable : [System.Environment]::SetEnvironmentVariable('FZF_DEFAULT_COMMAND', 'fd --type f', 'User')
+# 
+# # Check the Variable using `Get-ChildItem Env:FZF_DEFAULT_COMMAND` OR `$env:FZF_DEFAULT_COMMAND`
+#
+# 3. Set fd temporarily
+# 	- $env:FZF_DEFAULT_COMMAND = 'fd --type f'
