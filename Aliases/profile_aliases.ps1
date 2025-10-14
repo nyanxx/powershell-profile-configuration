@@ -112,3 +112,10 @@ Function Open-MicrosoftStore {
 	start ms-windows-store:
 }
 Set-Alias store Open-MicrosoftStore 
+
+Function Change-PowerShellTitle {
+	param([String]$Title) 
+	$HOST.ui.RawUI.WindowTitle = $Title
+	# Ref: https://devblogs.microsoft.com/scripting/powertip-change-the-powershell-console-title/
+}
+Set-Alias changepst Change-PowerShellTitle
