@@ -13,7 +13,8 @@ $functionFiles = @(
 	"WifiMan\WifiMan.ps1",
 	"Get-Sha256Hash.ps1",
 	"Invoke-FromHistory.ps1",
-	"Create-CaddyFile.ps1"
+	"Create-CaddyFile.ps1",
+	"Exit-PSJob.ps1"
 )
 
 # Loop through each function file and source it if it exists
