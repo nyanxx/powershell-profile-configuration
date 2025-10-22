@@ -119,3 +119,8 @@ Function Change-PowerShellTitle {
 	# Ref: https://devblogs.microsoft.com/scripting/powertip-change-the-powershell-console-title/
 }
 Set-Alias changepst Change-PowerShellTitle
+
+Function Open-EdgeBrowser {
+	Start-Process -FilePath "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+}
+Set-Alias edge Open-EdgeBrowser
