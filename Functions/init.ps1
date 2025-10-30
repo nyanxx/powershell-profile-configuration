@@ -14,7 +14,10 @@ $functionFiles = @(
 	"Get-Sha256Hash.ps1",
 	"Invoke-FromHistory.ps1",
 	"Create-CaddyFile.ps1",
-	"Exit-PSJob.ps1"
+	"Exit-PSJob.ps1",
+	#"fzf-open.ps1",
+	"Dirfzf.ps1"
+
 )
 
 # Loop through each function file and source it if it exists
