@@ -46,3 +46,6 @@ Function Exit-PSJob {
     }
 }
 Set-Alias closejob Exit-PSJob
+Set-Alias stopjob Exit-PSJob
+Set-Alias exitjob Exit-PSJob
+
