@@ -14,7 +14,8 @@ Function Exit-PSJob {
     switch ($Job.State) {
         'Running' {
             Write-Host "Stopping job ID $JobID..."
-            Stop-Job -Id $JobID -Force
+            #Stop-Job -Id $JobID -Force
+            Stop-Job -Id $JobID
         }
         'Stopped' {
             Write-Host "Job ID $JobID is already stopped."
