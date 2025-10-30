@@ -38,7 +38,9 @@ Function Prompt {
 # Create an Environment Variable "POWERSHELL_UPDATECHECK" and "Off" as Its Value.
 
 # Turn Off Predictive IntelliSense Ghosted Suggestions
+# [None, Plugin, History (default)]
 Set-PSReadLineOption -PredictionSource None
+#Set-PSReadLineOption -PredictionSource Plugin
 
 # Other Variables
 $ONEDRIVE_DIR = "$HOME\OneDrive"
