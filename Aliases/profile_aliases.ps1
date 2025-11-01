@@ -59,7 +59,12 @@ Set-Alias jobh Show-JobCmdlets
 Function Start-HWiNFO { Start-Process -FilePath "C:\Package Bin\hwi_822\HWiNFO64.exe"}
 Set-Alias info Start-HWiNFO
 
-Function Start-Obsidian { Start-Process -FilePath "$HOME\AppData\Local\Programs\Obsidian\Obsidian.exe" }
+Function Start-Obsidian { 
+	# If installed only for local user
+	#Start-Process -FilePath "$HOME\AppData\Local\Programs\Obsidian\Obsidian.exe"
+	# If installed system wide (all users)
+	Start-Process -FilePath "C:\Program Files\Obsidian\Obsidian.exe"
+}
 Set-Alias obs Start-Obsidian
 
 Function Run-AdminPowershell { 
