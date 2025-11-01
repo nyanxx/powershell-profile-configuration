@@ -124,3 +124,12 @@ Function Open-EdgeBrowser {
 	Start-Process -FilePath "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 }
 Set-Alias edge Open-EdgeBrowser
+
+Function Get-NetDataUsage {
+	Get-NetAdapterStatistics | Select-Object Name,
+	@{Name="Received (MB)";Expression={[math]::round($_.ReceivedBytes / 1MB, 2)}},
+	@{Name="Sent (MB)";Expression={[math]::round($_.SentBytes / 1MB, 2)}}
+}
+Set-Alias nstat Get-NetDataUsage
+
+
