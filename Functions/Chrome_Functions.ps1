@@ -18,7 +18,7 @@ Function Show-ChromeApps {
 	#         AppID = $AppId
 	# }
 
-	Get-ChildItem -Path "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Web Applications" -Directory -Filter "_crx_*" | ForEach-Object {
+	$Apps = Get-ChildItem -Path "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Web Applications" -Directory -Filter "_crx_*" | ForEach-Object {
 		$AppId = $_.Name -Replace '^_crx_', ''
 
 		$IconFile = Get-ChildItem -Path $_.FullName -File | Where-Object {
@@ -32,6 +32,13 @@ Function Show-ChromeApps {
 		}
 		# SCOPE: Cross verify with the "Get-StartApps" and only mention those
 	}	
+
+	$Apps | Format-Table -AutoSize
+
+	Write-Host -ForegroundColor DarkBlue "Usage:`n"
+	Write-Host -ForegroundColor DarkYellow "`tStart application by passing the app id (--app-id) as an argument list (-ArgumentList) to chrome_proxy.exe`n"
+	Write-Host -ForegroundColor DarkBlue "Example:`n"
+	Write-Host -ForegroundColor DarkYellow "`tStart-Process `"path/to/chrome_proxy.exe`" -ArgumentList `"--app-id=yourappid`"`n`tOR`n`tStart-Process `"path/to/chrome_proxy.exe`" -ArgumentList `"--profile-directory=Default --app-id=yourappid`"`n"
 
 	# Start application by passing the app id (--app-id) as an argument list (-ArgumentList) to chrome_proxy.exe
 	# Start-Process "path/to/chrome_proxy.exe" -ArgumentList "--app-id=yourappid"
