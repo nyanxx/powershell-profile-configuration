@@ -16,7 +16,8 @@ $functionFiles = @(
 	"Create-CaddyFile.ps1",
 	"Exit-PSJob.ps1",
 	#"fzf-open.ps1",
-	"Dirfzf.ps1"
+	"Dirfzf.ps1",
+	"tnt.ps1"
 
 )
 
